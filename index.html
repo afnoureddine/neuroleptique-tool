@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choix de Neuroleptique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Choix de Neuroleptique</h1>
+    <div id="description">
+        <p>Ce formulaire vous permet de choisir un neuroleptique en fonction des effets principaux désirés et des effets indésirables à éviter.</p>
+        <p>Cochez les effets que vous souhaitez et les effets indésirables que vous voulez éviter, puis cliquez sur "Proposer un Neuroleptique".</p>
+    </div>
+    
+    <form id="neuroleptique-form">
+        <h2>Effets Principaux</h2>
+        <label><input type="checkbox" name="effet" value="effet_antipsychotique"> Effet antipsychotique</label>
+        <label><input type="checkbox" name="effet" value="anti_maniaque"> Anti-maniaque</label>
+        <label><input type="checkbox" name="effet" value="antidépresseur"> Antidépresseur</label>
+        <label><input type="checkbox" name="effet" value="anxiolytique"> Effet anxiolytique</label>
+        <label><input type="checkbox" name="effet" value="diminution_symptômes_négatifs"> Diminution des symptômes négatifs</label>
+        
+        <h2>Effets Indésirables</h2>
+        <label><input type="checkbox" name="effet_indésirable" value="epms"> EPMS</label>
+        <label><input type="checkbox" name="effet_indésirable" value="dysfonctionnement_cognitif"> Dysfonctionnement cognitif</label>
+        <label><input type="checkbox" name="effet_indésirable" value="diminution_apprentissage_émotionnel"> Diminution de l'apprentissage émotionnel</label>
+        <label><input type="checkbox" name="effet_indésirable" value="diminution_attention"> Diminution de l'attention</label>
+        <label><input type="checkbox" name="effet_indésirable" value="augmentation_prolactine"> Augmentation de la prolactine</label>
+
+        <button type="button" onclick="proposerNeuroleptique()">Proposer un Neuroleptique</button>
+    </form>
+
+    <div id="resultat">
+        <h2>Propositions de Neuroleptique</h2>
+        <div id="propositions"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
